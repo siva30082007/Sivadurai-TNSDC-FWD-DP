@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sivadurai R - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      background: #005fa3;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: white;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .section h2 {
+      color: #0077cc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #0077cc;
+      color: white;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #0077cc;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #005fa3;
+    }
+
+    .contact-info {
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    .email-copy-message {
+      color: green;
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sivadurai R</h1>
+    <p>2nd Year BCA Student</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="section" id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Sivadurai R, a passionate and motivated 2nd year BCA (Bachelor of Computer Applications) student. I enjoy learning new technologies and applying them to solve real-world problems. I am interested in web development, programming, and software design.</p>
+    </div>
+
+    <div class="section" id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python (Basics)</li>
+        <li>C Programming</li>
+        <li>Database (MySQL)</li>
+        <li>Responsive Web Design</li>
+      </ul>
+    </div>
+
+    <div class="section" id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>Simple Portfolio Website (This one!)</li>
+        <li>Student Marksheet Generator using C</li>
+        <li>Basic Calculator with JavaScript</li>
+      </ul>
+    </div>
+
+    <div class="section" id="contact">
+      <h2>Contact Me</h2>
+      <p>If you'd like to connect with me, feel free to email me below:</p>
+      <div class="contact-info">
+        📧 <span id="email">siva30082007@gmail.com</span>
+        <br/><br/>
+        <button onclick="copyEmail()">Copy Email</button>
+        <p class="email-copy-message" id="copyMsg">Email copied to clipboard!</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Sivadurai R | BCA Student
+  </footer>
+
+  <script>
+    function copyEmail() {
+      const email = document.getElementById("email").innerText;
+      navigator.clipboard.writeText(email).then(() => {
+        const msg = document.getElementById("copyMsg");
+        msg.style.display = "block";
+        setTimeout(() => {
+          msg.style.display = "none";
+        }, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>
